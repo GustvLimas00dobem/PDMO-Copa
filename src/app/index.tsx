@@ -17,8 +17,8 @@ export default function Home() {
    
    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
         <Image 
-          source={require('./copa2026.png')} 
-          style={{ width: 200, height: 200 }} />
+          source={require('./copaEua2026.jpeg')} 
+          style={{ width: 400, height: 300 }} />
 
 
      
@@ -27,11 +27,14 @@ export default function Home() {
           <TextInput
             value={text}
             onChangeText={setText}
-            placeholder="Digite algo..."
+            placeholder="Digite seu nome..."
             style={{
               width: 250,
-              borderWidth: 1,
+              borderWidth: 3,
               padding: 10,
+              borderBlockColor: "#fffb0a",
+              borderRightColor: "#088a24ff",
+              borderLeftColor: "#008a24ff"
             }}
           />
           </View>
@@ -43,8 +46,11 @@ export default function Home() {
             onValueChange={(itemValue) => setSelectedLanguage(itemValue)}
             style={{
               width: 250,
-              borderWidth: 1,
+              borderWidth: 3,
               padding: 10,
+              borderBlockColor: "#fffb0a",
+              borderRightColor: "#088a24ff",
+              borderLeftColor: "#008a24ff"
             }}
                >
           <Picker.Item label="Selecione um país" value="" />
@@ -53,6 +59,11 @@ export default function Home() {
           <Picker.Item label="França" value="França" />
           <Picker.Item label="Espanha" value="Espanha" />
           <Picker.Item label="Inglaterra" value="Inglaterra" />
+          <Picker.Item label="Brasil" value="Uruguai" />
+          <Picker.Item label="Argentina" value="Cabo Verde" />
+          <Picker.Item label="França" value="Alemanha" />
+          <Picker.Item label="Espanha" value="Portugal" />
+          <Picker.Item label="Inglaterra" value="Belgica" />
           </Picker>
           </View>    
      
@@ -62,7 +73,7 @@ export default function Home() {
             onPress={() => {
               setText("");
               setSelectedLanguage("");
-              alert("Muito obrigado!");
+              alert("Vai Brasil! Boa Sorte com o Palpite");
             }}
             style={{
               marginTop: 24,
